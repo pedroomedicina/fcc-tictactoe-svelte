@@ -66,7 +66,7 @@ export default {
 		terser() &&
 		ghPages.publish('public', (e) => {
 			console.log('published', e);
-		})
+		}),
 	],
 	watch: {
 		clearScreen: false
