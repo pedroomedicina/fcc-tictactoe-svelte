@@ -1,5 +1,8 @@
 <script>
     export let space = '';
+    export let winner;
+
+    $: won = winner === space;
 </script>
 
 <style>
@@ -13,9 +16,14 @@
         font-size: 75px;
         line-height: 125px;
         text-align: center;
+        cursor: pointer;
+    }
+
+    .winning{
+        color: purple;
     }
 </style>
 
-<div class="space">
+<div class:winning={won} on:click class="space">
     {space}
 </div>
